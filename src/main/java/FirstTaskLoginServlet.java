@@ -19,7 +19,6 @@ public class FirstTaskLoginServlet extends HttpServlet {
         String password = request.getParameter("passwordFirstField");
         /*To send response back to the client, we need to obtain a writer from the response object
         by calling the method getWriter() of the HttpServletResponse interface:*/
-        //від цього рядка перенести в іншу сторінку
         String languages[] = request.getParameterValues("language");
         String languageInfo = "Languages are: ";
         if (languages != null) {
@@ -29,7 +28,6 @@ public class FirstTaskLoginServlet extends HttpServlet {
                 languageInfo += lang+" ";
             }
         }
-        //до цього рядка і зробити щоб виводило користувачеві
         System.out.println("username is: " + username);
         System.out.println("password is: " + password);
         PrintWriter printWriter = response.getWriter();
@@ -39,11 +37,7 @@ public class FirstTaskLoginServlet extends HttpServlet {
         htmlRespone += "Your pass is: "+password+"</h2>";
         htmlRespone += languageInfo;
         htmlRespone += "</html>";
-
         printWriter.println(htmlRespone);
-
-
     }
-
 
 }
