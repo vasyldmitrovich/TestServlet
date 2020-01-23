@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1 style="text-align: center">I created page with form</h1>
+<div style="text-align: center; background-color: coral" >
+<form name="loginForm" method="post" action="FirstTaskLoginServlet" style="text-align: right">
+    Username: <input type="text" name="usernameFirstField"/> <br/>
+    Password: <input type="password" name="passwordFirstField"/> <br/>
+    <input type="submit" value="Login" />
+</form>
+    </div>
+    <div style="background-color: burlywood">
+    <p>When you will be inputted field and submits the login form above</p>
+    <p>after that will be invoking method doPost() by the servlet container</p>
+    <p>this method read values of the fields posted from the form via the request object</p>
+    <p>Return response back to the user via the respone object</p>
+    <h4>To read values of forms fields, the HttpServletRequest interface provides the following methods:</h4>
+    <p>String getParameter(String name): gets value of a field which is specified by the given name,
+        as a String. The method returns null if there is no form field exists with the given name.</p>
+    <p>String[] getParameterValues(String name): gets values of a group of fields which have same name,
+        in an array of String objects. The method returns null if there is no field exists with the given name.</p>
+    </div>
+
+</body>
+</html>
