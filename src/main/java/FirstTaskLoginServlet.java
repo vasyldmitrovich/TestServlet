@@ -21,11 +21,12 @@ public class FirstTaskLoginServlet extends HttpServlet {
         by calling the method getWriter() of the HttpServletResponse interface:*/
         //від цього рядка перенести в іншу сторінку
         String languages[] = request.getParameterValues("language");
-
+        String languageInfo = "Languages are: ";
         if (languages != null) {
             System.out.println("Languages are: ");
             for (String lang : languages) {
                 System.out.println("\t" + lang);
+                languageInfo += lang+" ";
             }
         }
         //до цього рядка і зробити щоб виводило користувачеві
@@ -36,6 +37,7 @@ public class FirstTaskLoginServlet extends HttpServlet {
         String htmlRespone = "<html>";
         htmlRespone += "<h2>Your username is: " + username + "<br/>";
         htmlRespone += "Your pass is: "+password+"</h2>";
+        htmlRespone += languageInfo;
         htmlRespone += "</html>";
 
         printWriter.println(htmlRespone);
