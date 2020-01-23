@@ -28,6 +28,7 @@ public class FirstTaskLoginServlet extends HttpServlet {
                 languageInfo += lang+" ";
             }
         }
+        /*Add changes on development branch*/
         System.out.println("username is: " + username);
         System.out.println("password is: " + password);
         PrintWriter printWriter = response.getWriter();
