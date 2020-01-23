@@ -28,8 +28,11 @@ public class FirstTaskLoginServlet extends HttpServlet {
                 languageInfo += lang+" ";
             }
         }
+
+
         System.out.println("username is: " + username);
         System.out.println("password is: " + password);
+        /*Add changes on branch master and push*/
         PrintWriter printWriter = response.getWriter();
         /*Then use the print() or println() method to deliver the response (in form of HTML code). */
         String htmlRespone = "<html>";
