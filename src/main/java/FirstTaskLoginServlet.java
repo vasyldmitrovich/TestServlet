@@ -29,6 +29,8 @@ public class FirstTaskLoginServlet extends HttpServlet {
             }
         }
         /*Add changes on development branch*/
+        /*Ok we have two branch and we have different a few changes on two branch
+        * after that we marge development to master*/
         System.out.println("username is: " + username);
         System.out.println("password is: " + password);
         PrintWriter printWriter = response.getWriter();
