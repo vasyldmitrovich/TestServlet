@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/FirstTaskLoginServlet")
+@WebServlet(name ="myservlet", urlPatterns = "/FirstTaskLoginServlet", loadOnStartup = 1)
 public class FirstTaskLoginServlet extends HttpServlet {
     /*Create method with will be return information about username and password when user
     * writing and send on page FirstForm.html
@@ -28,13 +28,8 @@ public class FirstTaskLoginServlet extends HttpServlet {
                 languageInfo += lang+" ";
             }
         }
-        /*Add changes on development branch*/
-        /*Ok we have two branch and we have different a few changes on two branch
-        * after that we marge development to master*/
-        //Ok go to next step.
         System.out.println("username is: " + username);
         System.out.println("password is: " + password);
-        /*Add changes on branch master and push*/
         PrintWriter printWriter = response.getWriter();
         /*Then use the print() or println() method to deliver the response (in form of HTML code). */
         String htmlRespone = "<html>";
